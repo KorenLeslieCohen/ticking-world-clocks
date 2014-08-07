@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="clocks.js" type="text/javascript"></script>
+ <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+    
+     <script type="text/javascript">
+    
+        $(document).ready(function() {
+
+              var d = new Date ();
+              var n = d.getTimezoneOffset();
+              var UTChour = d.getUTCHours();
+
+              // NEW YORK
+         
+              setInterval( function() {
+              var seconds = new Date().getSeconds();
+              var sdegree = seconds * 6;
+              var srotate = "rotate(" + sdegree + "deg)";
+              
+              $(".one .sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+                  
+              }, 1000 );
+              
+         
+              setInterval( function() {
+              var hours = UTChour - 4;
+              if (hours >= 24) {
+                hour -= 24;
+              } else if (hours < 0) {
+                hours -= -24;
+              };
+              // var hours = getTimezoneOffset
+              var mins = new Date().getMinutes();
+              var hdegree = hours * 30 + (mins / 2);
+              var hrotate = "rotate(" + hdegree + "deg)";
+              
+              $(".one .hour").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
+                  
+              }, 1000 );
+        
+        
+              setInterval( function() {
+              var mins = new Date().getMinutes();
+              var mdegree = mins * 6;
+              var mrotate = "rotate(" + mdegree + "deg)";
+              
+              $(".one .min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
+                  
+              }, 1000 );
+
+              // SAN FRANCISCO
+
+              setInterval( function() {
+              var seconds = new Date().getSeconds();
+              var sdegree = seconds * 6;
+              var srotate = "rotate(" + sdegree + "deg)";
+              
+              $(".two .sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+                  
+              }, 1000 );
+
+              setInterval( function() {
+              var hours = UTChour - 7;
+              if (hours >= 24) {
+                hours -= 24;
+              } else if (hours < 0) {
+                hours -= -24;
+              };
+              // var hours = new Date().getHours() - 3;
+              var mins = new Date().getMinutes();
+              var hdegree = hours * 30 + (mins / 2);
+              var hrotate = "rotate(" + hdegree + "deg)";
+              
+              $(".two .hour").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
+                  
+              }, 1000 );
+        
+              setInterval( function() {
+              var mins = new Date().getMinutes();
+              var mdegree = mins * 6;
+              var mrotate = "rotate(" + mdegree + "deg)";
+              
+              $(".two .min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
+                  
+              }, 1000 );
+
+              // LONDON
+
+              setInterval( function() {
+              var seconds = new Date().getSeconds();
+              var sdegree = seconds * 6;
+              var srotate = "rotate(" + sdegree + "deg)";
+              
+              $(".three .sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+                  
+              }, 1000 );
+
+              setInterval( function() {
+              var hours = UTChour + 1;
+              if (hours >= 24) {
+                hours -= 24;
+              } else if (hours < 0) {
+                hours -= -24;
+              };
+              // var hours = new Date().getHours() - 3;
+              var mins = new Date().getMinutes();
+              var hdegree = hours * 30 + (mins / 2);
+              var hrotate = "rotate(" + hdegree + "deg)";
+              
+              $(".three .hour").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
+                  
+              }, 1000 );
+        
+              setInterval( function() {
+              var mins = new Date().getMinutes();
+              var mdegree = mins * 6;
+              var mrotate = "rotate(" + mdegree + "deg)";
+              
+              $(".three .min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
+                  
+              }, 1000 );
+
+              // PARIS
+
+              setInterval( function() {
+              var seconds = new Date().getSeconds();
+              var sdegree = seconds * 6;
+              var srotate = "rotate(" + sdegree + "deg)";
+              
+              $(".four .sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+                  
+              }, 1000 );
+
+              setInterval( function() {
+              var hours = UTChour + 2;
+              if (hours >= 24) {
+                hours -= 24;
+              } else if (hours < 0) {
+                hours -= -24;
+              };
+              // var hours = new Date().getHours() - 3;
+              var mins = new Date().getMinutes();
+              var hdegree = hours * 30 + (mins / 2);
+              var hrotate = "rotate(" + hdegree + "deg)";
+              
+              $(".four .hour").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
+                  
+              }, 1000 );
+        
+              setInterval( function() {
+              var mins = new Date().getMinutes();
+              var mdegree = mins * 6;
+              var mrotate = "rotate(" + mdegree + "deg)";
+              
+              $(".four .min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
+                  
+              }, 1000 );
+
+              // HONG KONG
+
+              setInterval( function() {
+              var seconds = new Date().getSeconds();
+              var sdegree = seconds * 6;
+              var srotate = "rotate(" + sdegree + "deg)";
+              
+              $(".five .sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+                  
+              }, 1000 );
+
+              setInterval( function() {
+              var hours = UTChour + 8;
+              if (hours >= 24) {
+                hours -= 24;
+              } else if (hours < 0) {
+                hours -= -24;
+              };
+              // var hours = new Date().getHours() - 3;
+              var mins = new Date().getMinutes();
+              var hdegree = hours * 30 + (mins / 2);
+              var hrotate = "rotate(" + hdegree + "deg)";
+              
+              $(".five .hour").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
+                  
+              }, 1000 );
+        
+              setInterval( function() {
+              var mins = new Date().getMinutes();
+              var mdegree = mins * 6;
+              var mrotate = "rotate(" + mdegree + "deg)";
+              
+              $(".five .min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
+                  
+              }, 1000 );
+
+              // SYDNEY
+
+              setInterval( function() {
+              var seconds = new Date().getSeconds();
+              var sdegree = seconds * 6;
+              var srotate = "rotate(" + sdegree + "deg)";
+              
+              $(".six .sec").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+                  
+              }, 1000 );
+
+              setInterval( function() {
+              var hours = UTChour + 10;
+              if (hours >= 24) {
+                hours -= 24;
+              } else if (hours < 0) {
+                hours -= -24;
+              };
+              // var hours = new Date().getHours() - 3;
+              var mins = new Date().getMinutes();
+              var hdegree = hours * 30 + (mins / 2);
+              var hrotate = "rotate(" + hdegree + "deg)";
+              
+              $(".six .hour").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
+                  
+              }, 1000 );
+        
+              setInterval( function() {
+              var mins = new Date().getMinutes();
+              var mdegree = mins * 6;
+              var mrotate = "rotate(" + mdegree + "deg)";
+              
+              $(".six .min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
+                  
+              }, 1000 );
+         
+        }); 
+    
+    </script>
+
+</head>
+
+<body>
+<div id="container">
+<div class="one">
+  <ul class="clock"> 
+      <li class="sec"></li>
+      <li class="hour"></li>
+      <li class="min"></li>
+  </ul>
+  <center><p>New York</p></center>
+  </div>
+
+<div class="two">
+    <ul class="clock"> 
+      <li class="sec"></li>
+      <li class="hour"></li>
+      <li class="min"></li>
+  </ul>
+  <center><p>San Francisco</p></center>
+  </div>
+
+<div class="three">
+    <ul class="clock"> 
+      <li class="sec"></li>
+      <li class="hour"></li>
+    <li class="min"></li>
+  </ul>
+  <center><p>London</p></center>
+
+  </div>
+
+<div class="four">
+    <ul class="clock"> 
+      <li class="sec"></li>
+      <li class="hour"></li>
+    <li class="min"></li>
+  </ul>
+  <center><p>Paris</p></center>
+  </div>
+
+<div class="five">
+    <ul class="clock"> 
+      <li class="sec"></li>
+      <li class="hour"></li>
+    <li class="min"></li>
+  </ul>
+  <center><p>Hong Kong</p></center>
+  </div>
+
+<div class="six">
+    <ul class="clock"> 
+      <li class="sec"></li>
+      <li class="hour"></li>
+    <li class="min"></li>
+  </ul>
+  <center><p>Sydney</p></center>
+  </div>
+
+  </div>
+  
+</body>
+  
+</html>
+
+</body>
+</html>
